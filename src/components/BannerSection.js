@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import Logo from './Logo';
 
 // const swooshIcon = require('/public/images/logo.svg');
 
@@ -7,7 +8,7 @@ class BannerSection extends React.Component {
 	render() {
 		return (
 			<div className={css(styles.bannerWrapper)}>
-				<div className={css(styles.mainSwoosh)}></div>
+				<div className={css(styles.mainSwoosh)}><Logo fillColor="#a4d85c" /></div>
 				<div className={css(styles.mainName)}>MERCURIAL SUPERFLY</div>
 				<div className={css(styles.belowName)}>It's time to destroy defenses</div>
 			</div>
