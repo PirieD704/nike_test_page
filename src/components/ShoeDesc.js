@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
 	},
 	textContent: {
 		fontSize: '12px',
-		color: '#fff'
+		color: '#fff',
+		textAlign: 'left'
 	}
 
 

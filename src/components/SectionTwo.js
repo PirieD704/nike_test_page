@@ -20,7 +20,7 @@ class SectionTwo extends React.Component {
 const styles = StyleSheet.create({
 	sectionTwoWrapper: {
 		display: 'flex',
-		backgroundColor: '#040404',
+		backgroundColor: '#141619',
 		padding: '100px 20px',
 		justifyContent: 'space-around',
 		alignItems: 'flex-end'

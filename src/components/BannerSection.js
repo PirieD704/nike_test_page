@@ -33,13 +33,15 @@ const styles = StyleSheet.create({
 	},
 	mainName: {
 		color: '#a4d85c',
+		fontFamily: 'Roboto',
 		fontWeight: 'bold',
-		fontSize: '30px',
-		padding: '20px'
+		fontSize: '60px',
+		padding: '5px'
 	},
 	belowName: {
 		color: '#fff',
-		fontSize: '24px'
+		fontFamily: 'Source Sans Pro',
+		fontSize: '34px'
 	}
 
 })
