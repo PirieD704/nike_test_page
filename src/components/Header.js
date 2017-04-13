@@ -20,7 +20,7 @@ class Header extends React.Component {
 const styles = StyleSheet.create({
 	headerWrapper: {
 		display: 'inline-flex',
-		backgroundColor: '#444',
+		backgroundColor: '#25272b',
 		width: '100%'
 	},
 	swoosh: {
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
 	menuLinks: {
 		color: '#fff',
 		padding: '20px',
+		fontFamily: 'Source Sans Pro',
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center'

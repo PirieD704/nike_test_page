@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import BannerSection from './BannerSection';
 import SectionTwo from './SectionTwo';
+import ShowCase from './ShowCase';
 
 class App extends React.Component {
 	render() {
@@ -10,6 +11,7 @@ class App extends React.Component {
 				<Header />
 				<BannerSection />
 				<SectionTwo />
+				<ShowCase />
     		</div>
   		)
 	}

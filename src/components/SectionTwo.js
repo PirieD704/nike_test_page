@@ -9,9 +9,11 @@ class SectionTwo extends React.Component {
 	render() {
 		return (
 			<div className={css(styles.sectionTwoWrapper)}>
-				<ShoeDesc header="BLANDIT TINCIDUNT METUS" content={textDescContent}/>
-				<ShoeDesc header="METUS PELLENTESQUE" content={textDescContent}/>
-				<ShoeDesc header="BLANDIT TINCIDUNT METUS" content={textDescContent}/>
+				<div className={css(styles.subWrapper)}>
+					<ShoeDesc header="BLANDIT TINCIDUNT METUS" content={textDescContent}/>
+					<ShoeDesc header="METUS PELLENTESQUE" content={textDescContent}/>
+					<ShoeDesc header="BLANDIT TINCIDUNT METUS" content={textDescContent}/>
+				</div>	
 			</div>
 		)
 	}
@@ -21,9 +23,14 @@ const styles = StyleSheet.create({
 	sectionTwoWrapper: {
 		display: 'flex',
 		backgroundColor: '#141619',
-		padding: '100px 20px',
+		padding: '150px 20px',
 		justifyContent: 'space-around',
 		alignItems: 'flex-end'
+	},
+	subWrapper: {
+		width: '980px',
+		display: 'flex',
+		justifyContent: 'space-around'
 	}
 })
 

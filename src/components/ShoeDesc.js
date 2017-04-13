@@ -14,16 +14,19 @@ class ShoeDesc extends React.Component {
 
 const styles = StyleSheet.create({
 	textWrapper: {
-		width: '250px'
+		width: '300px',
+		fontFamily: 'Source Sans Pro'
 	},
 	textHeader: {
-		fontSize: '22px',
-		color: '#fff'
+		fontSize: '28px',
+		color: '#fff',
+		width: '240px'
 	},
 	textContent: {
-		fontSize: '12px',
-		color: '#fff',
-		textAlign: 'left'
+		fontSize: '11px',
+		color: '#bbb',
+		textAlign: 'left',
+		lineHeight: '24px'
 	}
 
 
