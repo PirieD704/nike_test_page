@@ -5,6 +5,11 @@ import ShoeDesc from './ShoeDesc';
 const textDescContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 class ShowCase extends React.Component {
+	constructor() {
+		super();
+	}
+
+	// You need to use an anonymous function to run the onClick event
 	render() {
 		return (
 			<div className={css(styles.showCaseWrapper)}>
@@ -13,19 +18,19 @@ class ShowCase extends React.Component {
 						<div className={css(styles.leftText)}>
 							<span className={css(styles.nikeText)}>NIKE</span> SUPERFLY FG
 						</div>
-						<div className={css(styles.littleLeft, styles.leftShoes)}>
+						<div className={css(styles.littleLeft, styles.leftShoes)} onClick={() => this.props.changeShoe('left')}>
 							<img src="../images/left-view.png" />
 						</div>
-						<div className={css(styles.littleRight, styles.leftShoes)}>	
+						<div className={css(styles.littleRight, styles.leftShoes)} onClick={() => this.props.changeShoe('right')} >	
 							<img src="../images/right-view.png" />
 						</div>
-						<div className={css(styles.littleBottom, styles.leftShoes)}>
+						<div className={css(styles.littleBottom, styles.leftShoes)} onClick={() => this.props.changeShoe('bottom')} >
 							<img src="../images/bottom-view.png" />
 						</div>
 					</div>
 					<div className={css(styles.middleSideWrapper)}>
 						<img className={css(styles.bigCircle)} src="../images/circle-bg.png" />
-						<img className={css(styles.bigShoe)} src="../images/big-left.png" />
+						<img className={css(styles.bigShoe)} src={this.props.bigShoe.source} />
 					</div>
 					<div className={css(styles.rightHidden)}>
 					</div>
