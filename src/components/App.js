@@ -14,7 +14,8 @@ class App extends React.Component {
 		//getInitialState
 		this.state = {
 			bigShoe: {
-				source: '../images/big-left.png'
+				source: '../images/big-left.png',
+				shoe: 'left'
 			}
 		};
 	}
@@ -24,7 +25,8 @@ class App extends React.Component {
 		const bigShoe = this.state.bigShoe;
 		// change our shoe image
 		bigShoe.source = `../images/big-${shoe}.png`;
-		console.log(bigShoe.source);
+		bigShoe.shoe = shoe;
+		console.log(bigShoe.shoe)
 		this.setState({ bigShoe });
 	}
 

@@ -4,13 +4,32 @@ import ShoeDesc from './ShoeDesc';
 
 const textDescContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
+
+
 class ShowCase extends React.Component {
 	constructor() {
 		super();
 	}
-
 	// You need to use an anonymous function to run the onClick event
 	render() {
+		const shoe = this.props.bigShoe.shoe;
+		const shoeImage = this.props.bigShoe.source
+		function shouldBeLeft(sh) {
+			return sh === 'left';
+		}
+		function shouldBeRight(sh) {
+			return sh === 'right';
+		}
+		function shouldBeBottom(sh) {
+			return sh === 'bottom';
+		}
+		// conditional use of aphrodite where a boolean is determined from the shoe selection in state
+		const className = css(
+			shouldBeLeft(shoe) && styles.bigShoeleft,
+			shouldBeRight(shoe) && styles.bigShoeright,
+			shouldBeBottom(shoe) && styles.bigShoebottom
+		)
+
 		return (
 			<div className={css(styles.showCaseWrapper)}>
 				<div className={css(styles.shoeDisplayWrapper)}>
@@ -30,7 +49,7 @@ class ShowCase extends React.Component {
 					</div>
 					<div className={css(styles.middleSideWrapper)}>
 						<img className={css(styles.bigCircle)} src="../images/circle-bg.png" />
-						<img className={css(styles.bigShoe)} src={this.props.bigShoe.source} />
+						<img className={className} src={shoeImage} />
 					</div>
 					<div className={css(styles.rightHidden)}>
 					</div>
@@ -96,15 +115,29 @@ const styles = StyleSheet.create({
 		padding: '20px 10px'
 	},
 	middleSideWrapper: {
-		display: 'inline-flex'
+		display: 'inline-flex',
+		position: 'relative'
 	},
 	bigCircle: {
 		marginLeft: '100px'
 	},
-	bigShoe: {
+	bigShoeleft: {
 		position: 'absolute',
 		width: '600px',
-		marginTop: '100px'
+		marginTop: '100px',
+	},
+	bigShoeright: {
+		position: 'absolute',
+		width: '600px',
+		marginTop: '100px',
+		right: '-100px'
+	},
+	bigShoebottom: {
+		position: 'absolute',
+		width: '600px',
+		marginTop: '100px',
+		right: '10px',
+		top: '100px'
 	},
 	rightHidden: {
 		width: '125px'
