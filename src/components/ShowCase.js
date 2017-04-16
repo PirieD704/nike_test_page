@@ -24,11 +24,16 @@ class ShowCase extends React.Component {
 			return sh === 'bottom';
 		}
 		// conditional use of aphrodite where a boolean is determined from the shoe selection in state
-		const className = css(
-			shouldBeLeft(shoe) && styles.bigShoeleft,
-			shouldBeRight(shoe) && styles.bigShoeright,
-			shouldBeBottom(shoe) && styles.bigShoebottom
+		const className1 = css(
+			shouldBeLeft(shoe) ? styles.bigShoeleft : styles.bigShoeNoShow
 		)
+		const className2 = css(
+			shouldBeRight(shoe) ? styles.bigShoeright : styles.bigShoeNoShow
+		)
+		const className3 = css(
+			shouldBeBottom(shoe) ? styles.bigShoebottom : styles.bigShoeNoShow
+		)
+		
 
 		return (
 			<div className={css(styles.showCaseWrapper)}>
@@ -37,7 +42,7 @@ class ShowCase extends React.Component {
 						<div className={css(styles.leftText)}>
 							<span className={css(styles.nikeText)}>NIKE</span> SUPERFLY FG
 						</div>
-						<div className={css(styles.littleLeft, styles.leftShoes)} onClick={() => this.props.changeShoe('left')}>
+						<div className={css(styles.littleLeft, styles.leftShoes)} onClick={() => this.props.changeShoe('left')} >
 							<img src="../images/left-view.png" />
 						</div>
 						<div className={css(styles.littleRight, styles.leftShoes)} onClick={() => this.props.changeShoe('right')} >	
@@ -48,8 +53,10 @@ class ShowCase extends React.Component {
 						</div>
 					</div>
 					<div className={css(styles.middleSideWrapper)}>
-						<img className={css(styles.bigCircle)} src="../images/circle-bg.png" />
-						<img className={className} src={ this.props.bigShoe.source } />
+						<img className={css(styles.bigCircle)} src='../images/circle-bg.png' />
+						<img className={className1} src='../images/big-left.png' />
+						<img className={className2} src='../images/big-right.png'/>
+						<img className={className3} src='../images/big-bottom.png' />
 					</div>
 					<div className={css(styles.rightHidden)}>
 					</div>
@@ -149,6 +156,9 @@ const styles = StyleSheet.create({
 		paddingTop: '80px',
 		margin: 'auto',
 		textAlign: 'left'
+	},
+	bigShoeNoShow: {
+		display: 'none'
 	}
 
 })
