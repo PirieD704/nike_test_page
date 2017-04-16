@@ -49,7 +49,7 @@ class ShowCase extends React.Component {
 					</div>
 					<div className={css(styles.middleSideWrapper)}>
 						<img className={css(styles.bigCircle)} src="../images/circle-bg.png" />
-						<img className={className} src={shoeImage} />
+						<img className={className} src={ this.props.bigShoe.source } />
 					</div>
 					<div className={css(styles.rightHidden)}>
 					</div>
@@ -66,7 +66,7 @@ class ShowCase extends React.Component {
 
 const styles = StyleSheet.create({
 	showCaseWrapper: {
-		height: '1250px',
+		height: '1150px',
 		width: '100%',
 		backgroundColor: '#27292b',
 		backgroundImage: 'url("/images/content-2-bg.png")',

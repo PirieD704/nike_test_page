@@ -3,6 +3,7 @@ import Header from './Header';
 import BannerSection from './BannerSection';
 import SectionTwo from './SectionTwo';
 import ShowCase from './ShowCase';
+import GreenSection from './GreenSection';
 
 class App extends React.Component {
 	constructor() {
@@ -37,6 +38,7 @@ class App extends React.Component {
 				<BannerSection />
 				<SectionTwo />
 				<ShowCase bigShoe={this.state.bigShoe} changeShoe={this.changeShoe} />
+				<GreenSection />
     		</div>
   		)
 	}
