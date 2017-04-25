@@ -15,7 +15,10 @@ class ShoeDesc extends React.Component {
 const styles = StyleSheet.create({
 	textWrapper: {
 		width: '300px',
-		fontFamily: 'Source Sans Pro'
+		fontFamily: 'Source Sans Pro',
+		'@media (max-width: 320px)': {
+			width: '280px'
+		}		
 	},
 	textHeader: {
 		fontSize: '28px',
@@ -26,7 +29,8 @@ const styles = StyleSheet.create({
 		fontSize: '11px',
 		color: '#bbb',
 		textAlign: 'left',
-		lineHeight: '24px'
+		lineHeight: '24px',
+		paddingBottom: '30px'
 	}
 
 

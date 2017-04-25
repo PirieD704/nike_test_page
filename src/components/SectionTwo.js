@@ -25,13 +25,16 @@ const styles = StyleSheet.create({
 		backgroundColor: '#141619',
 		padding: '150px 20px',
 		justifyContent: 'space-around',
-		alignItems: 'flex-end'
+		alignItems: 'flex-end',
+		'@media (max-width: 667px)': {
+			padding: '20px'
+		}
 	},
 	subWrapper: {
 		width: '980px',
 		display: 'flex',
 		justifyContent: 'space-around',
-		'@media (max-width: 768px)': {
+		'@media (max-width: 768px)': { //take off width
 			width: 'auto',
 			flexWrap: 'wrap'
 		}

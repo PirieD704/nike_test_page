@@ -177,6 +177,7 @@ const styles = StyleSheet.create({
 		margin: 'auto',
 		textAlign: 'left',
 		'@media (max-width: 768px)': { //remove width from text section
+			display: 'none',
 			width: 'auto',
 			flexWrap: 'wrap'
 		}
