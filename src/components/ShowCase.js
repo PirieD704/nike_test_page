@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import ShoeDesc from './ShoeDesc';
+import ShowCaseMobile from './ShowCaseMobile';
 
 const textDescContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
@@ -61,6 +62,7 @@ class ShowCase extends React.Component {
 					<div className={css(styles.rightHidden)}>
 					</div>
 				</div>
+				<ShowCaseMobile />
 				<div className={css(styles.shoeDescText)}>
 					<ShoeDesc header="BLANDIT TINCIDUNT METUS" content={textDescContent}/>
 					<ShoeDesc header="METUS PELLENTESQUE" content={textDescContent}/>
