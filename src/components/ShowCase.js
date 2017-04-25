@@ -78,11 +78,18 @@ const styles = StyleSheet.create({
 		backgroundColor: '#27292b',
 		backgroundImage: 'url("/images/content-2-bg.png")',
 		backgroundRepeat: 'repeat-y',
-		textAlign: 'center'		
+		textAlign: 'center',
+		'@media (max-width: 768px)': { //remove height and width settings
+			height: 'auto',
+			width: 'auto'
+		}
 	},
 	shoeDisplayWrapper: {
 		paddingTop: '100px',
 		display: 'inline-flex',
+		'@media (max-width: 768px)': { //hide regular display for shoes
+			display: 'none'
+		}	
 	},
 	leftSide: {
 		color: '#fff',
@@ -128,10 +135,21 @@ const styles = StyleSheet.create({
 	bigCircle: {
 		marginLeft: '100px'
 	},
+	bigCircleMobile: {
+		display: 'none',
+		'@media (max-width: 667px)': {
+			width: '300px',
+			height: '300px',
+			margin: 'auto'
+		}
+	},
 	bigShoeleft: {
 		position: 'absolute',
 		width: '600px',
 		marginTop: '100px',
+		'@media (max-width: 667px)': {
+			width: '260px'
+		}
 	},
 	bigShoeright: {
 		position: 'absolute',
@@ -155,7 +173,11 @@ const styles = StyleSheet.create({
 		width: '980px',
 		paddingTop: '80px',
 		margin: 'auto',
-		textAlign: 'left'
+		textAlign: 'left',
+		'@media (max-width: 768px)': { //remove width from text section
+			width: 'auto',
+			flexWrap: 'wrap'
+		}
 	},
 	bigShoeNoShow: {
 		display: 'none'

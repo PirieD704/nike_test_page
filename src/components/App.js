@@ -4,6 +4,7 @@ import BannerSection from './BannerSection';
 import SectionTwo from './SectionTwo';
 import ShowCase from './ShowCase';
 import GreenSection from './GreenSection';
+import WhiteSection from './WhiteSection';
 
 class App extends React.Component {
 	constructor() {
@@ -11,6 +12,7 @@ class App extends React.Component {
 		super();
 
 		this.changeShoe = this.changeShoe.bind(this);
+
 
 		//getInitialState
 		this.state = {
@@ -27,18 +29,19 @@ class App extends React.Component {
 		// change our shoe image
 		bigShoe.source = `../images/big-${shoe}.png`;
 		bigShoe.shoe = shoe;
-		console.log(bigShoe.shoe)
+		// console.log(bigShoe.shoe)
 		this.setState({ bigShoe });
 	}
 
 	render() {
 		return (
 			<div>
-				<Header />
+				<Header svgWidth={this.svgWidth} svgHeight={this.svgHeight} />
 				<BannerSection />
 				<SectionTwo />
 				<ShowCase bigShoe={this.state.bigShoe} changeShoe={this.changeShoe} />
 				<GreenSection />
+				<WhiteSection />
     		</div>
   		)
 	}

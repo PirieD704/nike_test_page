@@ -33,24 +33,41 @@ const styles = StyleSheet.create({
 		width: '100%',
 		backgroundColor: '#a4d85c',
 		color: '#fff',
-		fontFamily: 'Source Sans Pro'
+		fontFamily: 'Source Sans Pro',
+		'@media (max-width: 768px)': { //remove height setting
+			height: 'auto'
+		}		
 	},
 	inBetweenGreen: {
 		width: '975px',
 		margin: 'auto',
-		paddingTop: '30px'
+		paddingTop: '30px',
+		'@media (max-width: 768px)': { //remove width setting and add padding
+			width: 'auto',
+			padding: '20px'
+		}
 	},
 	capitalText: {
 		fontSize: '18px',
-		paddingTop: '8px'
+		paddingTop: '8px',
+		'@media (max-width: 768px)': { //resize text to fit screen
+			fontSize: '14px',
+			paddingTop: '12px'
+		}
 	},
 	regText: {
 		fontSize: '14px',
-		paddingTop: '35px'
+		paddingTop: '35px',
+		'@media (max-width: 768px)': { //change font size
+			fontSize: '12px'
+		}		
 	},
 	bottomText: {
 		fontSize: '14px',
-		paddingTop: '35px'
+		paddingTop: '35px',
+		'@media (max-width: 768px)': { //change font size
+			fontSize: '12px'
+		}		
 	},
 	theButton: {
 		padding: '11px 40px',

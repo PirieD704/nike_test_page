@@ -30,7 +30,11 @@ const styles = StyleSheet.create({
 	subWrapper: {
 		width: '980px',
 		display: 'flex',
-		justifyContent: 'space-around'
+		justifyContent: 'space-around',
+		'@media (max-width: 768px)': {
+			width: 'auto',
+			flexWrap: 'wrap'
+		}
 	}
 })
 
