@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 	textWrapper: {
 		width: '300px',
 		fontFamily: 'Source Sans Pro',
-		'@media (max-width: 320px)': {
+		'@media (max-width: 320px)': { //needed to resize for small mobile screen
 			width: '280px'
 		}		
 	},
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 		color: '#bbb',
 		textAlign: 'left',
 		lineHeight: '24px',
-		paddingBottom: '30px'
+		paddingBottom: '30px' //added padding here to break up text in mobile
 	}
 
 
